@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aumentar/Diminuir Fonte</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        #textContainer {
+            background-color: white;
+            padding: 20px;
+            display: inline-block;
+        }
+    </style>
+    <script>
+        function changeFontSize(size) {
+            var paragraph = document.getElementById("paragraphText");
+            var currentSize = window.getComputedStyle(paragraph, null).getPropertyValue('font-size');
+            var newSize = parseInt(currentSize) + size + "px";
+            paragraph.style.fontSize = newSize;
+        }
+    </script>
+</head>
+<body>
+    <div id="textContainer">
+        <p id="paragraphText">Teste de tamanho</p>
+    </div>
+    <button onclick="changeFontSize(2)">Aumentar Fonte</button>
+    <button onclick="changeFontSize(-2)">Diminuir Fonte</button>
+</body>
+</html>

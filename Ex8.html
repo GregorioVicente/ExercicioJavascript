@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transformar Texto</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        #textContainer {
+            background-color: white;
+            padding: 20px;
+            display: inline-block;
+        }
+    </style>
+    <script>
+        function changeTextCase(type) {
+            var text = document.getElementById("paragraphText");
+            if (type === "uppercase") {
+                text.innerHTML = text.innerHTML.toUpperCase();
+            } else if (type === "lowercase") {
+                text.innerHTML = text.innerHTML.toLowerCase();
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="textContainer">
+        <p id="paragraphText">teste de fonte</p>
+    </div>
+    <button onclick="changeTextCase('uppercase')">Maiúscula</button>
+    <button onclick="changeTextCase('lowercase')">Minúscula</button>
+</body>
+</html>

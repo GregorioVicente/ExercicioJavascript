@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seleção de Itens</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+    </style>
+    <script>
+        function enableButton() {
+            var checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+            if (checkboxes.length >= 2) {
+                document.getElementById("submitButton").disabled = false;
+            } else {
+                document.getElementById("submitButton").disabled = true;
+            }
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <input type="checkbox" id="item1" name="item1" value="item1" onchange="enableButton()">
+        <label for="item1">Item 1</label><br>
+        <input type="checkbox" id="item2" name="item2" value="item2" onchange="enableButton()">
+        <label for="item2">Item 2</label><br>
+        <input type="checkbox" id="item3" name="item3" value="item3" onchange="enableButton()">
+        <label for="item3">Item 3</label><br>
+        <input type="checkbox" id="item4" name="item4" value="item4" onchange="enableButton()">
+        <label for="item4">Item 4</label><br>
+        <input type="submit" id="submitButton" value="Enviar" disabled>
+    </form>
+</body>
+</html>

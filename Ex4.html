@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostrar/Ocultar Parágrafo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+    </style>
+    <script>
+        function toggleParagraph() {
+            var paragraph = document.getElementById("hiddenParagraph");
+            if (paragraph.style.display === "none") {
+                paragraph.style.display = "block";
+            } else {
+                paragraph.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <p id="hiddenParagraph">Esse texto deve ser ocultado ao clicar no botão!</p>
+    <button onclick="toggleParagraph()">Mostrar/Ocultar</button>
+</body>
+</html>

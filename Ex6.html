@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Troca de Cores</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        #textContainer {
+            background-color: white;
+            padding: 20px;
+            display: inline-block;
+        }
+    </style>
+    <script>
+        function changeFontColor(color) {
+            document.getElementById("paragraphText").style.color = color;
+        }
+
+        function changeBgColor(color) {
+            document.getElementById("textContainer").style.backgroundColor = color;
+        }
+    </script>
+</head>
+<body>
+    <div id="textContainer">
+        <p id="paragraphText">Este é o texto que pode ter suas cores alteradas.</p>
+    </div>
+    <button onclick="changeFontColor('black')">Fonte Preta</button>
+    <button onclick="changeFontColor('white')">Fonte Branca</button>
+    <button onclick="changeBgColor('black')">Fundo Preto</button>
+    <button onclick="changeBgColor('white')">Fundo Branco</button>
+</body>
+</html>
